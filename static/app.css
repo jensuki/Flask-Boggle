@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Barlow', sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, rgb(168, 141, 167), rgba(25, 25, 255, 0.1));
+    height: 100vh;
+
+}
+
+#board {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    border: 1px solid rgb(192, 177, 177);
+    width: 350px;
+    padding: 20px;
+    border-radius: 25px;
+    background: linear-gradient(rgba(255, 255, 255, 0.649) 95%, #9a9999);
+    box-shadow:
+        inset 3px 5px 11px rgb(246, 241, 235),
+        inset 3px -5px 12px rgb(246, 241, 235),
+        1px 10px 15px rgb(147, 133, 133),
+        1px 3px 0 rgba(255, 255, 255, 0.9),
+        inset 0px 10px 4px white;
+
+}
+
+#board .letter {
+    box-shadow: 1px 1px 2px rgb(42, 41, 41), 5px 5px 10px rgb(162, 149, 149), 0px 0px 3px black;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.5);
+    background: #cdc2c2;
+    color: rgb(61, 56, 56);
+    border-width: 3px 6px 10px;
+    border-style: outset;
+    padding: 10px 0 0 0;
+    min-width: 50px;
+    height: 37px;
+    text-align: center;
+    margin: 5px 2px;
+    font-size: 1.5rem;
+    border-radius: 14px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    height: 30px;
+}
+
+
+#scoreboard {
+    margin: 0px 65px;
+    color: white;
+    text-align: center;
+    border-radius: 15px;
+    padding: 2px;
+    background: rgba(0, 0, 0, 0.4);
+    box-shadow:
+        1px .5px 4px rgba(0, 0, 0, 0.9),
+        inset 1px 1px .5px rgba(255, 255, 255, 0.3),
+        inset -1px -1px .5px rgba(255, 255, 255, 0.1);
+
+}
+
+#scoreboard .top-score,
+.ntimesplayed,
+.score,
+.timer {
+    width: 2rem;
+    /* Adjust the width as needed based on your design */
+    display: inline-block;
+    /* Ensures the width is respected */
+
+    /* Centers the text horizontally */
+    font-size: 1rem;
+    /* Adjust font size as needed */
+    font-weight: bold;
+    /* Ensures consistent appearance */
+
+    /* Adjust margin as needed for spacing */
+}
+
+span {
+    margin-left: 20px;
+}
+
+.words-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+ul.words {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows words to wrap to the next row */
+    justify-content: center;
+    /* Center align items horizontally */
+    padding: 0;
+    margin: 20px auto;
+    list-style-type: none;
+    /* Remove default list styling */
+}
+
+.timer {
+    color: rgb(211, 247, 80);
+}
+
+.appended-word {
+    padding: 4px;
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+
+}
+
+.msg-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.msg {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 4px;
+}
+
+
+.msg.ok {
+    color: white;
+    background-color: rgb(9, 129, 9);
+}
+
+.msg.warning {
+    color: white;
+    background-color: rgb(240, 100, 18);
+}
+
+.msg.err {
+    color: white;
+    background-color: rgb(243, 40, 40);
+}

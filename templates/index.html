@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoGgLe GaMe</title>
+    <link rel="stylesheet" href="/static/app.css">
+</head>
+
+<body>
+    <div id="board">
+        {% for row in board %}
+        <div class="row">
+            {% for letter in row %}
+            <div class="letter">{{ letter }}</div>
+            {% endfor %}
+        </div>
+        {% endfor %}
+    </div>
+
+    <div id="scoreboard">
+        <p>Top Score: <b class="top-score">{{ topscore }} </b>
+            <span>Number of Plays: <b class="ntimesplayed">{{ ntimesplayed }}</b></span>
+        </p>
+        <p>Current Score: <b class="score">0</b>
+            <span>Seconds Left: </span><b class="timer">60</b>
+        </p>
+    </div>
+
+    <form class="add-word">
+        <input type="text" class="word" name="word" required autofocus>
+        <button type="submit">Submit</button>
+    </form>
+    <div class="msg-container">
+        <div class="msg"></div>
+    </div>
+    <div class="words-container">
+        <ul class="words"></ul>
+    </div>
+
+    <script src="http://unpkg.com/jquery"></script>
+    <script src="https://unpkg.com/axios@0.19.0/dist/axios.js"></script>
+    <script src="/static/app.js"></script>
+
+</body>
+
+</html>
