@@ -45,4 +45,4 @@ def post_score():
     # return higher score from either score or topscore & save to session
     session['topscore'] = max(score, topscore)
 
-    return jsonify(brokeRecord=score > topscore)
+    return jsonify(newRecord=score > topscore)
